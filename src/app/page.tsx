@@ -143,8 +143,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Card 1: Professional */}
               <FadeIn delay={0.2} className="h-full">
-                <div className="bg-card border border-border-strong rounded-[2.5rem] p-12 h-full min-h-[520px] flex flex-col justify-between relative overflow-hidden group hover:border-accent transition-all duration-500 shadow-sm">
-                    <div className="absolute top-10 right-10 bg-background text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest text-muted border border-border-strong">
+                <div className="bg-card border border-border-strong rounded-[2.5rem] p-8 md:p-12 h-full min-h-[520px] flex flex-col justify-between relative overflow-hidden group hover:border-accent transition-all duration-500 shadow-sm">
+                    <div className="absolute top-6 right-6 md:top-10 md:right-10 bg-background text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest text-muted border border-border-strong">
                         The Drive
                     </div>
                     <div className="mt-auto relative z-10">
@@ -168,8 +168,8 @@ export default function Home() {
 
               {/* Card 2: Personal */}
               <FadeIn delay={0.3} className="h-full">
-                <div className="bg-card border border-border-subtle rounded-[2.5rem] p-12 h-full min-h-[520px] flex flex-col justify-between relative overflow-hidden group hover:border-accent transition-all duration-500 shadow-sm">
-                    <div className="absolute top-10 right-10 bg-background text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest text-muted border border-border-strong">
+                <div className="bg-card border border-border-subtle rounded-[2.5rem] p-8 md:p-12 h-full min-h-[520px] flex flex-col justify-between relative overflow-hidden group hover:border-accent transition-all duration-500 shadow-sm">
+                    <div className="absolute top-6 right-6 md:top-10 md:right-10 bg-background text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest text-muted border border-border-strong">
                         The Calm
                     </div>
                     <div className="mt-auto">
