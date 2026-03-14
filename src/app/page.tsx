@@ -44,7 +44,7 @@ export default function Home() {
             {/* Animated Hero Image as Background */}
             <motion.div 
                initial={{ scale: 1.1, opacity: 0 }}
-               animate={{ scale: 1, opacity: 0.35 }}
+               animate={{ scale: 1, opacity: 0.7 }}
                transition={{ duration: 3, ease: "easeOut" }}
                className="absolute inset-0"
             >
