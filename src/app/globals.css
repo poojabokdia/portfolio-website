@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Satoshi", "Inter", sans-serif;
+  --color-bg: #050505;
+  --color-accent: #FF6B50;
+  
+  --animate-float: float 4s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/4aed2f49-a476-436f-bae8-f31aa18f46fa/1767920861040-60c1c779/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --background: var(--color-bg);
+  --foreground: #ebebeb;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+.selection-coral::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+.selection-coral *::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.glass-nav {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-text {
+  font-size: 13vw;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+/* Hide scrollbar for cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
