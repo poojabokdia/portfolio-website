@@ -2,8 +2,14 @@
 
 @theme {
   --font-sans: "Satoshi", "Inter", sans-serif;
-  --color-bg: #050505;
-  --color-accent: #FF6B50;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-nav-link: var(--nav-link);
   
   --animate-float: float 4s ease-in-out infinite;
 
@@ -22,8 +28,27 @@
 }
 
 :root {
-  --background: var(--color-bg);
-  --foreground: #ebebeb;
+  /* Winter Theme (Dark Default) */
+  --background: #050505;
+  --foreground: #ffffff;
+  --muted: #888888;
+  --border-subtle: #1a1a1a;
+  --border-strong: #333333;
+  --card: #111111;
+  --accent: #FF6B50;
+  --nav-link: #ebebeb;
+}
+
+[data-theme='summer'] {
+  /* Summer Theme (Light) */
+  --background: #F9F6F0; /* Soft sand */
+  --foreground: #1c2331; /* Deep navy text */
+  --muted: #5E82B5; /* Fiordaliso Blue */
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --card: #ffffff;
+  --accent: #E65A28; /* Arancione orange */
+  --nav-link: #619F63; /* Olive Green */
 }
 
 body {
@@ -33,12 +58,12 @@ body {
   font-family: var(--font-sans);
 }
 
-.selection-coral::selection {
-  background-color: var(--color-accent);
+::selection {
+  background-color: var(--accent);
   color: white;
 }
-.selection-coral *::selection {
-  background-color: var(--color-accent);
+*::selection {
+  background-color: var(--accent);
   color: white;
 }
 
@@ -46,6 +71,27 @@ body {
   background: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='summer'] .glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.winter-gradient { display: block; }
+.summer-gradient { display: none; }
+
+[data-theme='summer'] .winter-gradient { display: none; }
+[data-theme='summer'] .summer-gradient { display: block; }
+
+.summer-tagline-text {
+  color: var(--foreground);
+}
+[data-theme='summer'] .summer-tagline-text {
+  color: #1c2331;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-text {

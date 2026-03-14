@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Pooja Bokdia | Portfolio",
@@ -13,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased selection-coral overflow-x-hidden bg-[#050505] text-[#ebebeb]">
-        <Navigation />
-        {children}
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className="antialiased overflow-x-hidden transition-colors duration-500">
+        <ThemeProvider attribute="data-theme" defaultTheme="winter" enableSystem={false} themes={['winter', 'summer']}>
+          <Navigation />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
